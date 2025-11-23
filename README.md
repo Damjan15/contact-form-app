@@ -1,16 +1,41 @@
-# React + Vite
+# Contact Form Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="desktop-preview.jpg" alt="project-cover">
 
-Currently, two official plugins are available:
+A responsive, accessible, and validated contact form built using React.js and Tailwind. This project demonstrates form state management, custom validation logic, and dynamic error handling without relying on default browser validation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- **Responsive Design:** Fully responsive layout that adapts to mobile, tablet, and desktop screens.
+- **Custom Validation:**
+  - **First Name:** Required, 3-20 characters.
+  - **Last Name:** Required, 3-40 characters.
+  - **Email:** Required, valid email format regex.
+  - **Query Type:** Required selection.
+  - **Message:** Required.
+  - **Consent:** Must be checked to submit.
+- **Real-time Feedback:** Visual error states (red borders and error messages) appear upon submission attempt.
+- **Success Handling:** Displays a success toast notification upon valid submission and clears the form.
+- **Accessible Inputs:** All form inputs are associated with labels and handle focus states.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React.js
+- **Styling:** Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── inputs/
+│   │   ├── CheckboxInput.jsx
+│   │   ├── EmailInput.jsx
+│   │   ├── RadioInput.jsx
+│   │   ├── TextAreaInput.jsx
+│   │   └── TextInput.jsx
+│   └── ContactCard.jsx
+├── App.jsx
+├── index.css  # Contains the custom styling and theme public
+└── index.html
+```
