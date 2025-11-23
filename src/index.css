@@ -2,7 +2,7 @@
 
 @theme {
   --color-grey-900: #2a4144;
-  --color-grey-500: #0c7d69;
+  --color-grey-500: #86a2a5;
   --color-green-600: #0c7d69;
   --color-green-200: #e0f1e8;
   --color-error: #d73c3c;
@@ -11,4 +11,28 @@
 
 body {
   @apply font-karla bg-green-200;
+}
+
+@layer base {
+  h1 {
+    @apply font-karla font-bold text-[32px] leading-[100%] tracking-[-1px] text-grey-900;
+  }
+}
+
+@layer components {
+  .input-label {
+    @apply text-[16px] leading-[150%] tracking-[0px] text-grey-900;
+  }
+
+  .input {
+    @apply border border-grey-500 w-full h-10 rounded-md p-2 transition-all cursor-pointer hover:border-green-600 focus:outline-0 focus:ring-green-600;
+  }
+
+  .input.error {
+    @apply border-error;
+  }
+
+  .input-error-message {
+    @apply block text-[16px] leading-[150%] tracking-[0px] text-error;
+  }
 }
