@@ -1,3 +1,5 @@
+import EmailInput from "./inputs/EmailInput";
+import RadioInput from "./inputs/RadioInput";
 import TextInput from "./inputs/TextInput";
 
 const ContactCard = () => {
@@ -11,6 +13,12 @@ const ContactCard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
           <TextInput label="First Name" name="first_name" required />
           <TextInput label="Last Name" name="last_name" required />
+        </div>
+        <div className="my-3">
+          <EmailInput label="Email Address" name="email" required />
+        </div>
+        <div className="w-full">
+          <RadioInput />
         </div>
       </form>
     </div>

@@ -1,4 +1,4 @@
-const TextInput = ({
+const EmailInput = ({
   label,
   name,
   value,
@@ -10,7 +10,7 @@ const TextInput = ({
     <div className="input-wrapper">
       <label className="input-label">{label} *</label>
       <input
-        type="text"
+        type="email"
         className={`input ${error && "error"}`}
         name={name}
         value={value}
@@ -22,4 +22,4 @@ const TextInput = ({
   );
 };
 
-export default TextInput;
+export default EmailInput;

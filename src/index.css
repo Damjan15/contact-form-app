@@ -20,6 +20,10 @@ body {
 }
 
 @layer components {
+  .input-wrapper {
+    @apply flex flex-col space-y-1.5;
+  }
+
   .input-label {
     @apply text-[16px] leading-[150%] tracking-[0px] text-grey-900;
   }
@@ -34,5 +38,13 @@ body {
 
   .input-error-message {
     @apply block text-[16px] leading-[150%] tracking-[0px] text-error;
+  }
+
+  .radio-input {
+    @apply flex items-center space-x-2 border border-grey-500 rounded-md p-2 h-10 transition-all cursor-pointer hover:border-green-600 focus:outline-0 focus:ring-green-600;
+  }
+
+  .radio-input-label {
+    @apply text-[18px] leading-[150%] tracking-[0px] text-grey-900;
   }
 }
