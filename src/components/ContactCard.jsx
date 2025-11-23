@@ -1,5 +1,7 @@
+import CheckboxInput from "./inputs/CheckboxInput";
 import EmailInput from "./inputs/EmailInput";
 import RadioInput from "./inputs/RadioInput";
+import TextAreaInput from "./inputs/TextAreaInput";
 import TextInput from "./inputs/TextInput";
 
 const ContactCard = () => {
@@ -20,6 +22,16 @@ const ContactCard = () => {
         <div className="w-full">
           <RadioInput />
         </div>
+        <div className="w-full my-3">
+          <TextAreaInput label="Message" name="message" required />
+        </div>
+        <div className="w-full">
+          <CheckboxInput />
+        </div>
+
+        <button className="block bg-green-600 w-full h-[50px] text-[18px] leading-[150%] text-white font-bold rounded-md cursor-pointer transition-all ease-in-out hover:bg-grey-900">
+          Submit
+        </button>
       </form>
     </div>
   );

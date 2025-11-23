@@ -32,7 +32,8 @@ body {
     @apply border border-grey-500 w-full h-10 rounded-md p-2 transition-all cursor-pointer hover:border-green-600 focus:outline-0 focus:ring-green-600;
   }
 
-  .input.error {
+  .input.error,
+  .textarea.error {
     @apply border-error;
   }
 
@@ -46,5 +47,9 @@ body {
 
   .radio-input-label {
     @apply text-[18px] leading-[150%] tracking-[0px] text-grey-900;
+  }
+
+  .textarea {
+    @apply border border-grey-500 w-full rounded-md p-2 transition-all cursor-pointer hover:border-green-600 focus:outline-0 focus:ring-green-600;
   }
 }
