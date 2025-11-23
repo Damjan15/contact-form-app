@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-grey-900: #2a4144;
+  --color-grey-500: #0c7d69;
+  --color-green-600: #0c7d69;
+  --color-green-200: #e0f1e8;
+  --color-error: #d73c3c;
+  --font-karla: "Karla", sans-serif;
+}
+
+body {
+  @apply font-karla bg-green-200;
+}
