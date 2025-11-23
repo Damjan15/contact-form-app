@@ -8,7 +8,9 @@ const TextAreaInput = ({
 }) => {
   return (
     <div className="input-wrapper">
-      <label className="input-label">{label} *</label>
+      <label className="input-label">
+        {label} {required && <span className="text-green-600">*</span>}
+      </label>
       <textarea
         type="text"
         className={`textarea ${error && "error"}`}
@@ -18,7 +20,7 @@ const TextAreaInput = ({
         required={required}
         rows="3"
       ></textarea>
-      {error && <span className="input-error-message">Error Message</span>}
+      {error && <span className="input-error-message">{error}</span>}
     </div>
   );
 };

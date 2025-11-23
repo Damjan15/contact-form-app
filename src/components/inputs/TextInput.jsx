@@ -8,7 +8,9 @@ const TextInput = ({
 }) => {
   return (
     <div className="input-wrapper">
-      <label className="input-label">{label} *</label>
+      <label className="input-label">
+        {label} {required && <span className="text-green-600">*</span>}
+      </label>
       <input
         type="text"
         className={`input ${error && "error"}`}
@@ -17,7 +19,7 @@ const TextInput = ({
         onChange={onChange}
         required={required}
       />
-      {error && <span className="input-error-message">Error Message</span>}
+      {error && <span className="input-error-message">{error}</span>}
     </div>
   );
 };

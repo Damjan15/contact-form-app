@@ -1,14 +1,29 @@
-const RadioInput = ({ onChange, required = false, error = false }) => {
+const RadioInput = ({
+  onChange,
+  selectedValue,
+  required = false,
+  error = null,
+}) => {
   return (
     <div className="input-wrapper">
-      <label className="input-label">Query Type *</label>
+      <label className="input-label">
+        Query Type {required && <span className="text-green-600 ml-1">*</span>}
+      </label>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
-        <div className="radio-input">
+        <div
+          className={`radio-input ${
+            selectedValue === "general" ? "selected" : ""
+          }`}
+          onClick={() =>
+            onChange({ target: { name: "queryType", value: "general" } })
+          }
+        >
           <input
             type="radio"
             name="general"
             value="general"
+            checked={selectedValue === "general"}
             onChange={onChange}
             required={required}
           />
@@ -17,11 +32,19 @@ const RadioInput = ({ onChange, required = false, error = false }) => {
           </label>
         </div>
 
-        <div className="radio-input">
+        <div
+          className={`radio-input ${
+            selectedValue === "support" ? "selected" : ""
+          }`}
+          onClick={() =>
+            onChange({ target: { name: "queryType", value: "support" } })
+          }
+        >
           <input
             type="radio"
             name="support"
             value="support"
+            checked={selectedValue === "support"}
             onChange={onChange}
             required={required}
           />
